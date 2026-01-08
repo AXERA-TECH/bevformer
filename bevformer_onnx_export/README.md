@@ -191,7 +191,7 @@ mkdir -p ckpts
 # Place your checkpoint file here, e.g., bevformer_tiny_epoch_24.pth
 ```
 
-**Note**: Pre-trained checkpoints and pre-converted models are available at [HuggingFace](https://huggingface.co/AXERA-TECH/bevformer). You can download checkpoint files and place them in the `ckpts/` directory.
+**Note**: Pre-trained checkpoints [Github](https://github.com/fundamentalvision/BEVFormer) and pre-converted models are available at [HuggingFace](https://huggingface.co/AXERA-TECH/bevformer). You can download checkpoint files and place them in the `ckpts/` directory.
 
 ### Step 2: Verify Model Requirements
 
