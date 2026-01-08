@@ -244,7 +244,7 @@ The export script automatically applies several modifications to ensure the expo
 - **Tensor Layout Adjustment**: Adjusts tensor layouts and dimensions for efficient inference on AXERA hardware
 - **Output Naming**: Ensures all intermediate outputs are properly named and accessible for quantization
 
-**Note**: The exported ONNX model has been specifically prepared for AXERA NPU deployment. All shapes are static, making it suitable for quantization and conversion to AXModel format using AXERA tools (e.g., Pulsar2).
+**Note**: The exported ONNX model has been specifically prepared for AXERA NPU deployment. All shapes are static, making it suitable for quantization and conversion to AXModel format using AXERA tools.
 
 ## Extract Data for Quantization
 
