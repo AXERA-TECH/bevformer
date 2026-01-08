@@ -462,8 +462,6 @@ quantization_data/
 4. Runs ONNX inference to generate `bev_embed` (which becomes `prev_bev` for the next frame)
 5. Saves all inputs as `.npy` files for quantization
 
-**Data Validation**: You can use the `prepare_calibration_data.sh` script to validate your extracted data. The script will check data integrity, verify file structures, and ensure all required files are present before proceeding with quantization data preparation.
-
 ## Prepare Calibration Dataset
 
 The calibration dataset is a small subset of quantization data used for model quantization.
