@@ -44,11 +44,11 @@ The export environment is used to convert PyTorch models to ONNX format. This re
 
 For a quick setup, follow these steps. For detailed version requirements and compatibility notes, see [`requirements2.txt`](./requirements2.txt).
 
-#### Step 1: Create Conda Environment
+#### Step 1: Create NEW PYTHON Environment
 
 ```bash
-conda create -n bevformer_onnx_export python=3.8
-conda activate bevformer_onnx_export
+python3.8 -m venv bevformer_onnx_export
+source bevformer_onnx_export/bin/activate
 ```
 
 #### Step 2: Install PyTorch
@@ -150,8 +150,8 @@ The inference environment is lightweight and only requires ONNX Runtime or AXEng
 #### Option 1: ONNX Runtime (CPU/GPU)
 
 ```bash
-conda create -n bevformer_inference python=3.8
-conda activate bevformer_inference
+python=3.8 -m venv bevformer_inference
+source bevformer_inference/bin/activate
 
 # For CPU inference
 pip install onnxruntime>=1.14.0
@@ -166,8 +166,8 @@ pip install numpy opencv-python tqdm
 #### Option 2: AXEngine (Hardware-specific)
 
 ```bash
-conda create -n bevformer_inference python=3.8
-conda activate bevformer_inference
+python=3.8 -m venv bevformer_inference
+source bevformer_inference/bin/activate
 
 # Install axengine (provided by hardware vendor)
 # Follow vendor-specific installation instructions
@@ -208,7 +208,7 @@ If you're exporting a model with DCN, ensure mmcv C++ extensions are properly in
 
 ```bash
 # Activate export environment
-conda activate bevformer_onnx_export
+source bevformer_inference/bin/activate
 
 # Set PYTHONPATH
 export PYTHONPATH=/path/to/mmdetection3d:$PYTHONPATH
@@ -291,7 +291,7 @@ Use the `extract_config.py` script to automatically extract configuration from t
 
 ```bash
 # Activate export environment
-conda activate bevformer_onnx_export
+source bevformer_inference/bin/activate
 
 # Set PYTHONPATH
 export PYTHONPATH=/path/to/mmdetection3d:$PYTHONPATH
@@ -417,7 +417,7 @@ with open('inference_config.json') as f:
 
 ```bash
 # Activate export environment
-conda activate bevformer_onnx_export
+source bevformer_inference/bin/activate
 
 # Set PYTHONPATH
 export PYTHONPATH=/path/to/mmdetection3d:$PYTHONPATH
@@ -546,7 +546,7 @@ inference_data/
 
 ```bash
 # Activate inference environment
-conda activate bevformer_inference
+source bevformer_inference/bin/activate
 
 # Run inference
 python tools/inference_onnx.py \
@@ -583,7 +583,7 @@ First, you need to quantize the ONNX model using AXEngine tools. Refer to AXEngi
 
 ```bash
 # Activate inference environment
-conda activate bevformer_inference
+source bevformer_inference/bin/activate
 
 # Run inference
 python tools/inference_axmodel.py \
